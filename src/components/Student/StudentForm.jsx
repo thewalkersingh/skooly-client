@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {createStudent, updateStudent, fetchStudents} from '../../api/studentService';
+import {createStudent, fetchStudents, updateStudent} from '../../services/studentService';
 import {useNavigate, useParams} from 'react-router-dom';
 import '../../styles/forms.css';
 import '../../styles/buttons.css';
@@ -11,15 +11,17 @@ export default function StudentForm() {
   
   // Define the fields reflecting your StudentDTO structure
   const [form, setForm] = useState({
+    admissionNumber: '',
     firstName: '',
     lastName: '',
-    address: '',
-    contactNumber: '',
-    email: '',
-    parentsName: '',
-    grade: '',
     age: '',
-    schoolId: ''
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    state: '',
+    zip: '',
+    country: ''
   });
   const [error, setError] = useState(null);
   
@@ -31,15 +33,17 @@ export default function StudentForm() {
         const student = students.find(s => s.id.toString() === id);
         if (student) {
           setForm({
+            admissionNumber: student.admissionNumber || '',
             firstName: student.firstName || '',
             lastName: student.lastName || '',
-            address: student.address || '',
-            contactNumber: student.contactNumber || '',
-            email: student.email || '',
-            parentsName: student.parentsName || '',
-            grade: student.grade || '',
             age: student.age || '',
-            schoolId: student.schoolId || ''
+            phone: student.phone || '',
+            email: student.email || '',
+            address: student.address || '',
+            city: student.city || '',
+            state: student.state || '',
+            zip: student.zip || '',
+            country: student.country || ''
           });
         } else {
           setError('Student not found');
@@ -73,41 +77,60 @@ export default function StudentForm() {
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
+          <label>Admission Number:</label>
+          <input type="text" name="admissionNumber" value={form.admissionNumber} onChange={handleChange} required/>
+        </div>
+        
+        <div className="form-group">
           <label>First Name:</label>
           <input type="text" name="firstName" value={form.firstName} onChange={handleChange} required/>
         </div>
+        
         <div className="form-group">
           <label>Last Name:</label>
           <input type="text" name="lastName" value={form.lastName} onChange={handleChange} required/>
         </div>
+        
         <div className="form-group">
-          <label>Address:</label>
-          <input type="text" name="address" value={form.address} onChange={handleChange}/>
+          <label>Phone:</label>
+          <input type="number" name="phone" value={form.phone} onChange={handleChange} required/>
         </div>
-        <div className="form-group">
-          <label>Contact Number:</label>
-          <input type="text" name="contactNumber" value={form.contactNumber} onChange={handleChange} required/>
-        </div>
+        
         <div className="form-group">
           <label>Email:</label>
           <input type="email" name="email" value={form.email} onChange={handleChange} required/>
         </div>
-        <div className="form-group">
-          <label>Parents' Name:</label>
-          <input type="text" name="parentsName" value={form.parentsName} onChange={handleChange} required/>
-        </div>
-        <div className="form-group">
-          <label>Grade:</label>
-          <input type="text" name="grade" value={form.grade} onChange={handleChange} required/>
-        </div>
+        
         <div className="form-group">
           <label>Age:</label>
           <input type="number" name="age" value={form.age} onChange={handleChange} required/>
         </div>
+        
         <div className="form-group">
-          <label>School ID:</label>
-          <input type="number" name="schoolId" value={form.schoolId} onChange={handleChange} required/>
+          <label>Address:</label>
+          <input type="text" name="address" value={form.address} onChange={handleChange}/>
         </div>
+        
+        <div className="form-group">
+          <label>City:</label>
+          <input type="text" name="city" value={form.city} onChange={handleChange} required/>
+        </div>
+        
+        <div className="form-group">
+          <label>State:</label>
+          <input type="text" name="state" value={form.state} onChange={handleChange} required/>
+        </div>
+        
+        <div className="form-group">
+          <label>Zip:</label>
+          <input type="text" name="zip" value={form.zip} onChange={handleChange} required/>
+        </div>
+        
+        <div className="form-group">
+          <label>Country:</label>
+          <input type="text" name="country" value={form.country} onChange={handleChange} required/>
+        </div>
+        
         <button type="submit" className="btn btn-success submit-btn">
           {isEdit ? 'Update Student' : 'Add Student'}
         </button>

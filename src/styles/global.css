@@ -4,6 +4,8 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #eef2f3;
     color: #333;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
 }
 
 .about {

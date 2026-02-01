@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {createTeacher, updateTeacher, fetchTeachers} from '../../api/teacherService';
+import {createTeacher, fetchTeachers, updateTeacher} from '../../services/teacherService';
 import {useNavigate, useParams} from 'react-router-dom';
 import '../../styles/forms.css';
 import '../../styles/buttons.css';
@@ -11,12 +11,10 @@ export default function TeacherForm() {
   
   // Initialize the form state based on TeacherDTO structure
   const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
+    employeeCode: '',
+    name: '',
     email: '',
-    subject: '',
-    contactNumber: '',
-    schoolId: ''
+    phone: '',
   });
   const [error, setError] = useState(null);
   
@@ -28,12 +26,10 @@ export default function TeacherForm() {
         const teacher = teachers.find(t => t.id.toString() === id);
         if (teacher) {
           setForm({
-            firstName: teacher.firstName || '',
-            lastName: teacher.lastName || '',
+            employeeCode: teacher.employeeCode || '',
+            name: teacher.name || '',
             email: teacher.email || '',
-            subject: teacher.subject || '',
-            contactNumber: teacher.contactNumber || '',
-            schoolId: teacher.schoolId || ''
+            phone: teacher.phone || ''
           });
         } else {
           setError('Teacher not found');
@@ -66,30 +62,22 @@ export default function TeacherForm() {
       <h2>{isEdit ? 'Edit Teacher' : 'Add New Teacher'}</h2>
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
+        
         <div className="form-group">
-          <label>First Name:</label>
-          <input type="text" name="firstName" value={form.firstName} onChange={handleChange} required/>
+          <label> Name:</label>
+          <input type="text" name="name" value={form.name} onChange={handleChange} required/>
         </div>
-        <div className="form-group">
-          <label>Last Name:</label>
-          <input type="text" name="lastName" value={form.lastName} onChange={handleChange} required/>
-        </div>
+        
         <div className="form-group">
           <label>Email:</label>
-          <input type="email" name="email" value={form.email} onChange={handleChange} required/>
+          <input type="text" name="email" value={form.email} onChange={handleChange} required/>
         </div>
+        
         <div className="form-group">
-          <label>Subject:</label>
-          <input type="text" name="subject" value={form.subject} onChange={handleChange} required/>
+          <label>Phone:</label>
+          <input type="text" name="phone" value={form.phone} onChange={handleChange} required/>
         </div>
-        <div className="form-group">
-          <label>Contact Number:</label>
-          <input type="text" name="contactNumber" value={form.contactNumber} onChange={handleChange} required/>
-        </div>
-        <div className="form-group">
-          <label>School ID:</label>
-          <input type="number" name="schoolId" value={form.schoolId} onChange={handleChange} required/>
-        </div>
+        
         <button type="submit" className="btn btn-success submit-btn">
           {isEdit ? 'Update Teacher' : 'Add Teacher'}
         </button>

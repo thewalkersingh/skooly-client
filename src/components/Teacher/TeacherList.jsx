@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchTeachers, deleteTeacher} from '../../api/teacherService';
+import {deleteTeacher, fetchTeachers} from '../../services/teacherService';
 import {Link} from 'react-router-dom';
 import '../../styles/tables.css';
 import '../../styles/buttons.css';
@@ -41,22 +41,18 @@ export default function TeacherList() {
       <table>
         <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th> Name</th>
           <th>Email</th>
-          <th>Subject</th>
-          <th>Contact Number</th>
+          <th>Number</th>
           <th>Actions</th>
         </tr>
         </thead>
         <tbody>
         {teachers.map(teacher => (
           <tr key={teacher.id}>
-            <td>{teacher.firstName}</td>
-            <td>{teacher.lastName}</td>
+            <td>{teacher.name}</td>
             <td>{teacher.email}</td>
-            <td>{teacher.subject}</td>
-            <td>{teacher.contactNumber}</td>
+            <td>{teacher.phone}</td>
             <td>
               <Link to={`/teachers/${teacher.id}/edit`}>
                 <button className="btn btn-success">Edit</button>
