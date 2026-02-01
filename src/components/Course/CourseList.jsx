@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchCourses, deleteCourse} from '../../api/courseService';
+import {deleteCourse, fetchCourses} from '../../services/courseService';
 import {Link} from 'react-router-dom';
 import '../../styles/tables.css';
 import '../../styles/buttons.css';

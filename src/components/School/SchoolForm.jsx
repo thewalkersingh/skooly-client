@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {createSchool, updateSchool, fetchSchools} from '../../api/schoolService';
+import {createSchool, fetchSchools, updateSchool} from '../../services/schoolService';
 import {useNavigate, useParams} from 'react-router-dom';
 import '../../styles/forms.css';
 import '../../styles/buttons.css';

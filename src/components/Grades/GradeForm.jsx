@@ -1,6 +1,6 @@
 // src/components/Grades/GradeForm.jsx
 import React, {useState} from 'react';
-import {submitGrade} from '../../api/gradeService';
+import {submitGrade} from '../../services/gradeService';
 
 export default function GradeForm() {
   const [form, setForm] = useState({

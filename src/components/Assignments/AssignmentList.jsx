@@ -1,6 +1,6 @@
 // src/components/Assignments/AssignmentList.jsx
-import React, {useState, useEffect} from 'react';
-import {fetchAssignments} from '../../api/assignmentService';
+import React, {useEffect, useState} from 'react';
+import {fetchAssignments} from '../../services/assignmentService';
 
 export default function AssignmentList() {
   const [assignments, setAssignments] = useState([]);

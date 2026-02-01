@@ -1,5 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {createCourse, updateCourse, fetchCourseById, fetchTeachers, fetchStudents} from '../../api/courseService';
+import {
+  createCourse,
+  fetchCourseById,
+  fetchStudents,
+  fetchTeachers,
+  updateCourse
+} from '../../services/courseService';
 import {useNavigate, useParams} from 'react-router-dom';
 import '../../styles/forms.css';
 import '../../styles/buttons.css';

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchSchools, deleteSchool} from '../../api/schoolService';
+import {deleteSchool, fetchSchools} from '../../services/schoolService';
 import {Link} from 'react-router-dom';
 import '../../styles/buttons.css';
 import '../../styles/tables.css';

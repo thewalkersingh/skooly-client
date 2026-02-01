@@ -1,6 +1,6 @@
 // src/components/Submissions/SubmissionForm.jsx
 import React, {useState} from 'react';
-import {createSubmission} from '../../api/submissionService';
+import {createSubmission} from '../../services/submissionService';
 
 export default function SubmissionForm() {
   const [form, setForm] = useState({

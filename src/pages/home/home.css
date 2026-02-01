@@ -1,0 +1,150 @@
+/* Main container for the Home page */
+.home {
+    min-height: calc(100vh - 70px);
+    padding: 50px 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 30px;
+    background-color: #fafafa;
+}
+
+/* Styles for the filter section */
+.home_filters {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    /* position: sticky;
+    left: 0;
+    top: 0px;
+    border: 1px solid black; */
+    /* Stick the filter section as you scroll */
+}
+
+/* Filter sections (Price Range, Categories) */
+.home_filters h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Price Range Filter */
+.price_range_filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price_range {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #d3d3d3;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+}
+
+.price_range::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #28a745;
+    cursor: pointer;
+}
+
+.price_range_labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.price_range_labels span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Category Filter */
+.category_filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.category_options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category_options label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.category_options input {
+    margin-right: 10px;
+}
+
+/* Loader container for loading state */
+.loader_container {
+    flex: 1;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* When no products are found */
+.no_product_found {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Product listing grid */
+.home_products_section {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .home_filters {
+        width: 100%;
+        margin-bottom: 20px;
+        position: static;
+        /* No sticky on smaller screens */
+    }
+
+    .home_products_section {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .home {
+        padding: 15px;
+    }
+
+    .home_products_section {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

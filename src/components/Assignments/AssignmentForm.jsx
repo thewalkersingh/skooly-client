@@ -1,6 +1,6 @@
 // src/components/Assignments/AssignmentForm.jsx
 import React, {useState} from 'react';
-import {createAssignment} from '../../api/assignmentService';
+import {createAssignment} from '../../services/assignmentService';
 
 export default function AssignmentForm() {
   const [form, setForm] = useState({

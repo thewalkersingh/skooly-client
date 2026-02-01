@@ -65,10 +65,10 @@ export default function Navbar() {
       </div>
       
       {/* Right Side: Login/Signup */}
-      <div className="nav-right">
-        <Link to="/login" className="nav-auth">Login</Link>
-        <Link to="/signup" className="nav-auth">Signup</Link>
-      </div>
+      {/*<div className="nav-right">*/}
+      {/*  <Link to="/login" className="nav-auth">Login</Link>*/}
+      {/*  <Link to="/signup" className="nav-auth">Signup</Link>*/}
+      {/*</div>*/}
     </nav>
   );
 }

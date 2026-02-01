@@ -1,11 +1,11 @@
 // src/components/Attendance/AttendanceList.jsx
 import React, {useEffect, useState} from 'react';
 import {
-  fetchAttendanceRecords,
+  fetchAttendanceByDate,
   fetchAttendanceByStudent,
-  fetchAttendanceByDate
-} from '../../api/attendanceService';
-import {fetchStudents} from '../../api/studentService';
+  fetchAttendanceRecords
+} from '../../services/attendanceService';
+import {fetchStudents} from '../../services/studentService';
 import '../../styles/tables.css';
 
 export default function AttendanceList() {

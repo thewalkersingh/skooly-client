@@ -1,0 +1,39 @@
+.social-container {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+
+}
+
+.social-link {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    /* Hover effect */
+}
+
+/* Original brand colors */
+.facebook {
+    color: #1877f2;
+    /* Facebook blue */
+}
+
+.twitter {
+    color: #1da1f2;
+    /* Twitter blue */
+}
+
+.instagram {
+    color: #e4405f;
+    /* Instagram gradient (just one color) */
+}
+
+.linkedin {
+    color: #0077b5;
+    /* LinkedIn blue */
+}

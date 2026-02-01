@@ -1,0 +1,82 @@
+/* Normal Navbar styles */
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fff
+}
+
+
+.navbar_logo_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar_logo_container img {
+    height: 1.5rem;
+    width: auto;
+}
+
+.navbar_logo_container h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    /* color: #20B2AA; */
+    color: #81afdd;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar_search_form {
+    width: 500px;
+    margin: 0 20px;
+}
+
+.navbar_search_form input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    /* box-shadow: 0 0px 15px #f5f5f5; */
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar_options {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar_options a {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    color: #031b34;
+}
+
+.navbar_options a img {
+    width: 1.5rem;
+}
+
+.active {
+    /* color: #20B2AA !important; */
+    color: #81afdd !important;
+}
+
+.navbar_options a:hover {
+    /* color: #5fe4dd; */
+    color: #3992eb;
+}

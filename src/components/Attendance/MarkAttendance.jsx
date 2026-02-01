@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import {markAttendance} from '../../api/attendanceService';
-import {fetchStudents} from '../../api/studentService';
+import React, {useEffect, useState} from 'react';
+import {markAttendance} from '../../services/attendanceService';
+import {fetchStudents} from '../../services/studentService';
 import '../../styles/forms.css';
 
 export default function MarkAttendance() {
