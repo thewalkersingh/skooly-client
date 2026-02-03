@@ -1,0 +1,167 @@
+.signup-section {
+    position: relative;
+    z-index: 10;
+    padding: 180px 0 112px;
+    overflow: hidden;
+}
+
+.signup-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.signup-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 6px;
+    padding: 40px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dark-theme .signup-box {
+    background: #1f2937;
+}
+
+.signup-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.dark-theme .signup-title {
+    color: #fff;
+}
+
+.signup-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 32px;
+    color: #555;
+}
+
+.signup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f8f8f8;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    border-color: #4a6cf7;
+    background: rgba(74, 108, 247, 0.05);
+    color: #4a6cf7;
+}
+
+.btn-icon {
+    margin-right: 12px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(85, 85, 85, 0.5);
+}
+
+.divider p {
+    margin: 0 16px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: #111;
+}
+
+.dark-theme .form-group label {
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #4a6cf7;
+}
+
+.form-check {
+    margin-bottom: 24px;
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.form-check a {
+    color: #4a6cf7;
+    text-decoration: underline;
+}
+
+.form-submit {
+    margin-bottom: 24px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 6px;
+    background: #4a6cf7;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: rgba(74, 108, 247, 0.9);
+}
+
+.signin-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+.signin-text a {
+    color: #4a6cf7;
+    text-decoration: underline;
+}
+
+.signup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

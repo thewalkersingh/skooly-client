@@ -1,42 +1,24 @@
-import React, {Suspense} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import RootLayout from "./app/RootLayout.jsx";
+import Home from "./app/Home.jsx";
+import SignupPage from "./app/signup/SignupPage.jsx";
+import SigninPage from "./app/signin/SigninPage.jsx";
+import BlogPage from "./app/blog/BlogPage.jsx";
 
 // Route groups (each manages its own <Routes>)
-import TeacherRoutes from "./routes/TeacherRoutes.jsx";
-import StudentRoutes from "./routes/StudentRoutes.jsx";
-import PublicRoutes from "./routes/PublicRoutes.jsx";
-import AdminRoutes from "./routes/AdminRoutes.jsx";
-import SchoolRoutes from "./routes/SchoolRoutes.jsx";
 
-function App() {
-  // Suppose you get studentId from user authentication state.
-  const studentId = 1; // or use your actual logic to fetch the student's ID
-  const teacherId = 2;
+export default function App () {
   return (
-    <Router>
-      <Navbar/>
-      <Suspense fallback={<div className="loading">Loading...</div>}>
-        {/* Public routes */}
-        <PublicRoutes/>
-        
-        {/* Student routes */}
-        <StudentRoutes studentId={studentId}/>
-        
-        {/* Teacher routes */}
-        <TeacherRoutes teacherId={teacherId}/>
-        
-        {/* Admin routes */}
-        <AdminRoutes/>
-        
-        {/* School routes */}
-        <SchoolRoutes/>
-      
-      </Suspense>
-      <Footer/>
-    </Router>
+     <Router>
+       <Routes>
+         {/* Root layout wraps header/footer/scroll */}
+         <Route path="/" element={<RootLayout><Home/></RootLayout>}/>
+         <Route path="/signup" element={<RootLayout><SignupPage/></RootLayout>}/>
+         <Route path="/signin" element={<RootLayout><SigninPage/></RootLayout>}/>
+         <Route path="/blog" element={<RootLayout><BlogPage/></RootLayout>}/>
+       </Routes>
+     
+     </Router>
   );
 }
-
-export default App;

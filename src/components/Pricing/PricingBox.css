@@ -1,0 +1,93 @@
+.pricing-wrapper {
+    width: 100%;
+}
+
+.pricing-box {
+    position: relative;
+    z-index: 10;
+    background: #ffffff;
+    padding: 40px 32px;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.pricing-box:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.pricing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.amount {
+    margin-left: 4px;
+}
+
+.time {
+    font-size: 18px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-left: 4px;
+}
+
+.package-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Subtitle */
+.subtitle {
+    margin-bottom: 28px;
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* Action */
+.pricing-action {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(107, 114, 128, 0.1);
+}
+
+.trial-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4a6cf7;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trial-btn:hover {
+    opacity: 0.85;
+    box-shadow: 0 10px 25px rgba(74, 108, 247, 0.4);
+}
+
+/* Features */
+.pricing-features {
+    font-size: 15px;
+}
+
+/* Background SVG */
+.pricing-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}

@@ -1,0 +1,106 @@
+.breadcrumb-section {
+    position: relative;
+    padding-top: 112px;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .breadcrumb-section {
+        padding-top: 150px;
+    }
+}
+
+/* Layout */
+.breadcrumb-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -16px;
+}
+
+.breadcrumb-left,
+.breadcrumb-right {
+    padding: 0 16px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .breadcrumb-left {
+        width: 66.666%;
+    }
+
+    .breadcrumb-right {
+        width: 33.333%;
+        text-align: right;
+    }
+}
+
+/* Content */
+.breadcrumb-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 640px) {
+    .breadcrumb-title {
+        font-size: 30px;
+    }
+}
+
+.breadcrumb-desc {
+    font-size: 16px;
+    font-weight: 500;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Breadcrumb list */
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+    color: #4a6cf7;
+}
+
+.breadcrumb-separator {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #6b7280;
+    border-right: 2px solid #6b7280;
+    transform: rotate(45deg);
+    margin: 0 12px;
+}
+
+.breadcrumb-current {
+    color: #4a6cf7;
+    font-weight: 500;
+}
+
+/* Background shapes */
+.breadcrumb-bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.breadcrumb-bg.left {
+    left: 0;
+}
+
+.breadcrumb-bg.right {
+    right: 0;
+}

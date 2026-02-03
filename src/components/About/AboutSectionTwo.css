@@ -1,0 +1,114 @@
+.about-two-section {
+    padding: 64px 0; /* Tailwind py-16 */
+}
+
+@media (min-width: 768px) {
+    .about-two-section {
+        padding: 80px 0; /* md:py-20 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-two-section {
+        padding: 112px 0; /* lg:py-28 */
+    }
+}
+
+.about-two-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.about-two-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -16px;
+}
+
+.about-two-col {
+    width: 100%;
+    padding: 0 16px;
+}
+
+@media (min-width: 1024px) {
+    .about-two-col {
+        width: 50%;
+    }
+}
+
+.about-two-image-wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.about-two-image {
+    width: 100%;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.light-mode {
+    display: block;
+}
+
+.dark-mode {
+    display: none;
+}
+
+.dark-theme .light-mode {
+    display: none;
+}
+
+.dark-theme .dark-mode {
+    display: block;
+}
+
+.about-two-content {
+    max-width: 470px;
+}
+
+.about-two-block {
+    margin-bottom: 36px;
+}
+
+.about-two-title {
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (min-width: 640px) {
+    .about-two-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-two-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .about-two-title {
+        font-size: 1.5rem;
+    }
+}
+
+.about-two-paragraph {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (min-width: 640px) {
+    .about-two-paragraph {
+        font-size: 1.125rem;
+    }
+}
