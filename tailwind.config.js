@@ -1,36 +1,28 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-
 /** @type {import("tailwindcss").Config} */
+import colors from "tailwindcss/colors";
 
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}",],
+  content: [
+    "./index.html",
+    "./src/pages/**/*.{js,jsx,mdx}",
+    "./src/components/**/*.{js,jsx,mdx}",
+  ],
   darkMode: "class",
   theme: {
     container: {
-      center: true, padding: "1rem",
+      center: true,
+      padding: "1rem",
     },
     
     screens: {
-      xs: "450px", // => @media (min-width: 450px) { ... }
-      
-      sm: "575px", // => @media (min-width: 576px) { ... }
-      
-      md: "768px", // => @media (min-width: 768px) { ... }
-      
-      lg: "992px", // => @media (min-width: 992px) { ... }
-      
-      xl: "1200px", // => @media (min-width: 1200px) { ... }
-      
-      "2xl": "1400px", // => @media (min-width: 1400px) { ... }
-    }, extend: {
+      xs: "450px",
+      sm: "575px",
+      md: "768px",
+      lg: "992px",
+      xl: "1200px",
+      "2xl": "1400px",
+    },
+    extend: {
       colors: {
         current: "currentColor",
         transparent: "transparent",
@@ -41,13 +33,17 @@ export default {
         yellow: "#FBB040",
         "bg-color-dark": "#171C28",
         "body-color": {
-          DEFAULT: "#788293", dark: "#959CB1",
+          DEFAULT: "#788293",
+          dark: "#959CB1",
         },
         stroke: {
-          stroke: "#E3E8EF", dark: "#353943",
+          stroke: "#E3E8EF",
+          dark: "#353943",
         },
         gray: {
-          ...colors.gray, dark: "#1E232E", light: "#F0F2F9",
+          ...colors.gray,
+          dark: "#1E232E",
+          light: "#F0F2F9",
         },
       },
       
@@ -64,7 +60,8 @@ export default {
         btn: "0px 1px 2px rgba(4, 10, 34, 0.15)",
         "btn-hover": "0px 1px 2px rgba(0, 0, 0, 0.15)",
         "btn-light": "0px 1px 2px rgba(0, 0, 0, 0.1)",
-      }, dropShadow: {
+      },
+      dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
     },

@@ -2,3 +2,10 @@ For Auth check: D:\XResources\Project FrontEnd\auth-mui-template
 For Home, Signup, login: D:\XResources\Project FrontEnd\material-tailwind-kit-react-main
 For Landing Page: D:\XResources\Project FrontEnd\React-Landing-Page-Template-master
 For Landing Page: D:\XResources\Project FrontEnd\startup-nextjs-main
+
+
+className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+
+https://animate.style/
+
+className="absolute inset-0 w-full h-full object-cover"

@@ -1,6 +1,6 @@
-import SectionTitle from "../Common/SectionTitle.jsx"
-import SingleBlog from "./SingleBlog.jsx"
-import blogData from "./blogData.jsx"
+import SectionTitle from "../Common/SectionTitle.jsx";
+import blogData from "./blogData.js";
+import SingleBlog from "./SingleBlog.jsx";
 
 const Blog = () => {
   return (
@@ -11,7 +11,8 @@ const Blog = () => {
        <div className="container">
          <SectionTitle
             title="Our Latest Blogs"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have
+            suffered alteration in some form."
             center
          />
          
@@ -24,7 +25,7 @@ const Blog = () => {
          </div>
        </div>
      </section>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

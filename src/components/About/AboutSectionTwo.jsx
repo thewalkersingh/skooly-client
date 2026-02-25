@@ -1,49 +1,53 @@
-import React from "react"
-import "./AboutSectionTwo.css"
-
 const AboutSectionTwo = () => {
   return (
-     <section id="about-two" className="about-two-section">
-       <div className="about-two-container">
-         <div className="about-two-row">
-           {/* Left column with image */}
-           <div className="about-two-col">
-             <div className="about-two-image-wrapper">
+     <section className="py-16 md:py-20 lg:py-28">
+       <div className="container">
+         <div className="-mx-4 flex flex-wrap items-center">
+           <div className="w-full px-4 lg:w-1/2">
+             <div
+                className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+                data-wow-delay=".15s"
+             >
                <img
                   src="/images/about/about-image-2.svg"
                   alt="about image"
-                  className="about-two-image light-mode"
+                  className="drop-shadow-three dark:hidden dark:drop-shadow-none"
                />
                <img
                   src="/images/about/about-image-2-dark.svg"
                   alt="about image"
-                  className="about-two-image dark-mode"
+                  className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
                />
              </div>
            </div>
-           
-           {/* Right column with text */}
-           <div className="about-two-col">
-             <div className="about-two-content">
-               <div className="about-two-block">
-                 <h3 className="about-two-title">Bug free code</h3>
-                 <p className="about-two-paragraph">
+           <div className="w-full px-4 lg:w-1/2">
+             <div className="max-w-[470px]">
+               <div className="mb-9">
+                 <h3 className="mb-4 text-xl font-bold text-black
+                  dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                   Bug free code
+                 </h3>
+                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                  </p>
                </div>
-               
-               <div className="about-two-block">
-                 <h3 className="about-two-title">Premier support</h3>
-                 <p className="about-two-paragraph">
+               <div className="mb-9">
+                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl
+                 xl:text-2xl">
+                   Premier support
+                 </h3>
+                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                    do eiusmod tempor incididunt.
                  </p>
                </div>
-               
-               <div className="about-two-block">
-                 <h3 className="about-two-title">Next.js</h3>
-                 <p className="about-two-paragraph">
+               <div className="mb-1">
+                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl
+                 xl:text-2xl">
+                   React js and Tailwind
+                 </h3>
+                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                    Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
                    consectetur adipiscing elit setim.
                  </p>
@@ -53,7 +57,7 @@ const AboutSectionTwo = () => {
          </div>
        </div>
      </section>
-  )
-}
+  );
+};
 
-export default AboutSectionTwo
+export default AboutSectionTwo;

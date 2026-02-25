@@ -1,11 +1,5 @@
 const brandsData = [
-  {
-    id: 6,
-    name: "Formbold",
-    href: "https://formbold.com",
-    image: "/images/brands/formbold.svg",
-    imageLight: "/images/brands/formbold-light.svg",
-  },
+  
   {
     id: 1,
     name: "UIdeck",
@@ -41,6 +35,13 @@ const brandsData = [
     image: "/images/brands/plainadmin.svg",
     imageLight: "/images/brands/plainadmin-light.svg",
   },
-]
+  {
+    id: 6,
+    name: "Formbold",
+    href: "https://formbold.com",
+    image: "/images/brands/formbold.svg",
+    imageLight: "/images/brands/formbold-light.svg",
+  },
+];
 
-export default brandsData
+export default brandsData;

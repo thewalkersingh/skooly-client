@@ -1,10 +1,10 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./styles/global.css";
-import { ThemeProvider } from "./app/ThemeProvider.jsx";
+import { StrictMode } from "react";
 
 createRoot(document.getElementById("root")).render(
-   <ThemeProvider>
+   <StrictMode>
      <App/>
-   </ThemeProvider>
+   </StrictMode>,
 );
