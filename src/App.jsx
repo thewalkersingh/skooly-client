@@ -2,7 +2,7 @@ import "./App.css";
 
 import { useEffect } from "react";
 import { Toaster } from "sonner";
-import AppRouter from "@/routes/AppRouter";
+import AppRouter from "@/routes/AppRouter.jsx";
 import useUiStore from "@/store/uiStore";
 
 export default function App () {

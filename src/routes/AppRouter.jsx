@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import ProtectedRoute from "./ProtectedRoute";
-import RoleRoute from "./RoleRoute";
+import ProtectedRoute from "./ProtectedRoute.jsx";
+import RoleRoute from "./RoleRoute.jsx";
 import AppLayout from "@/components/layout/AppLayout";
 
 // Auth
