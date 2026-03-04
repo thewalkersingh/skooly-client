@@ -40,6 +40,8 @@ import MaintenancePage from "@/pages/facilities/MaintenancePage";
 import ParentsPage from "@/pages/parents/ParentsPage";
 import NotificationsPage from "@/pages/notifications/NotificationsPage";
 import ActivityLogsPage from "@/pages/activity-logs/ActivityLogsPage";
+import ParentDetailPage from "@/pages/parents/ParentDetailPage.jsx";
+import ParentFormPage from "@/pages/parents/ParentFormPage.jsx";
 
 export default function AppRouter () {
   return (
@@ -107,6 +109,9 @@ export default function AppRouter () {
              
              {/* Parents */}
              <Route path="/parents" element={<ParentsPage/>}/>
+             <Route path="/parents/new" element={<ParentFormPage/>}/>
+             <Route path="/parents/:id" element={<ParentDetailPage/>}/>
+             <Route path="/parents/:id/edit" element={<ParentDetailPage/>}/>
              
              {/* Notifications */}
              <Route path="/notifications" element={<NotificationsPage/>}/>
