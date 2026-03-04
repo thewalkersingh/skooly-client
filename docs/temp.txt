@@ -1,0 +1,8 @@
+// Add to top of StaffPage.jsx
+import { Input }    from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label }    from '@/components/ui/label'
+import { Loader2 }  from 'lucide-react'
+
+// Then in LeaveFormDialog and PayrollFormDialog,
+// remove the require() calls and use the imported components directly
