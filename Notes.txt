@@ -1,4 +1,0 @@
-For Auth check: D:\XResources\Project FrontEnd\auth-mui-template
-For Home, Signup, login: D:\XResources\Project FrontEnd\material-tailwind-kit-react-main
-For Landing Page: D:\XResources\Project FrontEnd\React-Landing-Page-Template-master
-For Landing Page: D:\XResources\Project FrontEnd\startup-nextjs-main

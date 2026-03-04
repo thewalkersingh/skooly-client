@@ -1,42 +1,26 @@
-import React, {Suspense} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import "./App.css";
 
-// Route groups (each manages its own <Routes>)
-import TeacherRoutes from "./routes/TeacherRoutes.jsx";
-import StudentRoutes from "./routes/StudentRoutes.jsx";
-import PublicRoutes from "./routes/PublicRoutes.jsx";
-import AdminRoutes from "./routes/AdminRoutes.jsx";
-import SchoolRoutes from "./routes/SchoolRoutes.jsx";
+import { useEffect } from "react";
+import { Toaster } from "sonner";
+import AppRouter from "@/routes/AppRouter";
+import useUiStore from "@/store/uiStore";
 
-function App() {
-  // Suppose you get studentId from user authentication state.
-  const studentId = 1; // or use your actual logic to fetch the student's ID
-  const teacherId = 2;
+export default function App () {
+  const initTheme = useUiStore((s) => s.initTheme);
+  
+  useEffect(() => {
+    initTheme();
+  }, []);
+  
   return (
-    <Router>
-      <Navbar/>
-      <Suspense fallback={<div className="loading">Loading...</div>}>
-        {/* Public routes */}
-        <PublicRoutes/>
-        
-        {/* Student routes */}
-        <StudentRoutes studentId={studentId}/>
-        
-        {/* Teacher routes */}
-        <TeacherRoutes teacherId={teacherId}/>
-        
-        {/* Admin routes */}
-        <AdminRoutes/>
-        
-        {/* School routes */}
-        <SchoolRoutes/>
-      
-      </Suspense>
-      <Footer/>
-    </Router>
+     <>
+       <AppRouter/>
+       <Toaster
+          position="top-right"
+          richColors
+          closeButton
+          duration={3000}
+       />
+     </>
   );
 }
-
-export default App;
