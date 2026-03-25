@@ -19,6 +19,10 @@ export default defineConfig({
     },
   },
 });
+
+// VITE_API_BASE_URL=https://skooly-backend.onrender.com
+
+
 //  npm run dev --host
 //  172.24.176.1:5173
 //  http://172.24.176.1:5173/
