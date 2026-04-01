@@ -45,7 +45,7 @@ export default function TeachersPage () {
     setLoading(true);
     try {
       const res = await teacherApi.getAll(schoolId, q);
-      setTeachers(res.data);
+      setTeachers(Array.isArray(res.data) ? res.data : res.data.content ?? []);
     } catch (err) {
       toast({ message: err.message, type: "error" });
     } finally {

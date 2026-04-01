@@ -4,10 +4,10 @@ import { studentApi } from "@/services/studentApi";
 import { classApi } from "@/services/classApi";
 import { useAuthStore } from "@/store/authStore";
 import { useToast } from "@/hooks/useToast";
-import StudentFormModalx from "./StudentFormModalx.jsx";
 import ConfirmDialog from "@/components/ui/ConfirmDialog";
 import ToastContainer from "@/components/ui/ToastContainer";
 import "./students.css";
+import StudentFormModal from "@/pages/students/StudentFormModal.jsx";
 
 const STATUS_BADGE = {
   ACTIVE: "badge badge-success",
@@ -47,8 +47,8 @@ export default function StudentsPage () {
           classApi.getAll(schoolId),
           classApi.getAllSections(schoolId),
         ]);
-        setClasses(classRes.data);
-        setSections(sectionRes.data);
+        setClasses(Array.isArray(classRes.data) ? classRes.data : classRes.data.content ?? []);
+        setSections(Array.isArray(sectionRes.data) ? sectionRes.data : sectionRes.data.content ?? []);
       } catch (err) {
         toast({ message: "Failed to load classes/sections: " + err.message, type: "error" });
       }
@@ -58,10 +58,11 @@ export default function StudentsPage () {
   
   // ── fetch students ──────────────────────────────────────
   const fetchStudents = useCallback(async (q) => {
+    console.log('schoolId:', schoolId)
     setLoading(true);
     try {
       const res = await studentApi.getAll(schoolId, q);
-      setStudents(res.data);
+      setStudents(Array.isArray(res.data) ? res.data : res.data.content ?? []);
     } catch (err) {
       toast({ message: err.message, type: "error" });
     } finally {
@@ -110,7 +111,7 @@ export default function StudentsPage () {
       await studentApi.delete(schoolId, deleteTarget.id);
       toast({ message: "Student deleted successfully" });
       setDeleteTarget(null);
-      fetchStudents(search);
+      await fetchStudents(search);
     } catch (err) {
       toast({ message: err.message, type: "error" });
     } finally {
@@ -226,7 +227,7 @@ export default function StudentsPage () {
          </div>
        </div>
        
-       <StudentFormModalx
+       <StudentFormModal
           open={formOpen}
           onClose={() => setFormOpen(false)}
           onSubmit={handleSubmit}

@@ -1,0 +1,175 @@
+/* =============================================
+   Landing Page Styles
+   ============================================= */
+
+.landing-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.landing-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.landing-logo-icon {
+    width: 52px;
+    height: 52px;
+    background-color: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-logo-icon svg {
+    width: 30px;
+    height: 30px;
+    color: #2563eb;
+}
+
+.landing-logo-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+.landing-tagline {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.landing-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 560px;
+    padding: 36px;
+}
+
+.landing-card-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 6px;
+}
+
+.landing-card-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    margin-bottom: 24px;
+}
+
+.school-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 360px;
+    overflow-y: auto;
+    margin-bottom: 8px;
+}
+
+.school-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.school-list::-webkit-scrollbar-thumb {
+    background: var(--gray-200);
+    border-radius: 4px;
+}
+
+.school-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+    text-align: left;
+    background: white;
+    width: 100%;
+}
+
+.school-item:hover {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.school-item-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.school-item-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--primary);
+}
+
+.school-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.school-item-name {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.school-item-meta {
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+    margin-top: 2px;
+}
+
+.school-item-arrow {
+    width: 18px;
+    height: 18px;
+    color: var(--gray-300);
+    flex-shrink: 0;
+}
+
+.school-item:hover .school-item-arrow {
+    color: var(--primary);
+}
+
+.landing-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--gray-400);
+}
+
+.landing-empty svg {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 12px;
+    color: var(--gray-300);
+}
+
+.landing-footer {
+    margin-top: 32px;
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
