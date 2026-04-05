@@ -7,7 +7,6 @@ import ClassFormModal from "./ClassFormModal";
 import SectionFormModal from "./SectionFormModal";
 import ConfirmDialog from "@/components/ui/ConfirmDialog";
 import ToastContainer from "@/components/ui/ToastContainer";
-import "./classes.css";
 
 export default function ClassesPage () {
   const { user } = useAuthStore();

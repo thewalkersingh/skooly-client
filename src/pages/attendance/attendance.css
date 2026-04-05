@@ -1,0 +1,131 @@
+.attendance-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.attendance-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+}
+
+.attendance-row:hover {
+    background-color: var(--gray-50);
+}
+
+.attendance-student-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.attendance-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.attendance-name {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.attendance-meta {
+    font-size: var(--font-size-xs);
+    color: var(--gray-400);
+}
+
+.attendance-status-group {
+    display: flex;
+    gap: 6px;
+}
+
+.attendance-status-btn {
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition);
+    background: var(--gray-100);
+    color: var(--gray-500);
+}
+
+.attendance-status-btn:hover {
+    opacity: 0.85;
+}
+
+.attendance-status-btn.selected-PRESENT {
+    background-color: var(--success-light);
+    color: var(--success);
+    border-color: var(--success);
+}
+
+.attendance-status-btn.selected-ABSENT {
+    background-color: var(--danger-light);
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+.attendance-status-btn.selected-LATE {
+    background-color: var(--warning-light);
+    color: var(--warning);
+    border-color: var(--warning);
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.summary-card-value {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.summary-card-label {
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.summary-card.present .summary-card-value {
+    color: var(--success);
+}
+
+.summary-card.absent .summary-card-value {
+    color: var(--danger);
+}
+
+.summary-card.late .summary-card-value {
+    color: var(--warning);
+}
